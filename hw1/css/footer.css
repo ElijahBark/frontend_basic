@@ -1,0 +1,20 @@
+.footer {
+    min-height: 100px;
+}
+
+.footer__text {
+    width: 80%;
+    margin: 0 10%;
+    font-family: Roboto, sans-serif;
+    color:  #373737;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: right;
+    letter-spacing: 2px;
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+
+
+

@@ -1,0 +1,24 @@
+.main-menu {
+    box-sizing: border-box;
+    min-height: 80px;
+    padding: 32px 0;
+    width: 50%;
+    margin: 0 25%;
+    vertical-align: middle;
+}
+
+.main-menu__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.main-menu__link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    color: #16a085;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 10px;
+}

@@ -1,0 +1,46 @@
+.header {
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    height: 50px;
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo:hover .header__logo__sign * {
+    color: #f26522;
+}
+
+.header__logo .hover {
+    display: none;
+}
+
+.header__logo:hover .regular {
+    display: none;
+}
+
+.header__logo:hover .hover {
+    display: block;
+}
+
+.header__logo__sign {
+    width: 110px;
+}
+
+.header__logo__sign_big {
+    font-size: 29px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.header__logo__sign_small {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 21px;
+}

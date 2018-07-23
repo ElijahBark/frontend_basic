@@ -1,0 +1,114 @@
+.main-part {
+    min-height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.advertising-block {
+    width: 310px;
+    height: 250px;
+    margin-right: 70px;
+}
+
+.advertising-block:nth-child(3n) {
+    margin-right: 0px;
+}
+
+.advertising-block__image {
+    box-sizing: border-box;
+    width: 310px;
+    height: 200px;
+    background-size: cover;
+    margin-bottom: 22px;
+    border: 2px solid #fff;
+    border-image-source: linear-gradient(white, black);
+    border-image-slice: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.advertising-block__details {
+    box-sizing: border-box;
+    position: absolute;
+    top: 300px;
+    background: #f26522;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+.advertising-block:hover .advertising-block__details {
+    animation-name: animation;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation {
+    from {
+        top: 200px;
+    }
+    to {
+        top: 135px;
+    }
+}
+
+.advertising-block__details__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.advertising-block__details__text {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.advertising-block__details__text-big {
+    font-size: 20px;
+}
+
+.link {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.advertising-block:hover .advertising-block__caption {
+    color: #f26522;
+}
+
+.advertising-block__caption {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.image-1 {
+    background-image: url("../img/image-1.png");
+}
+
+.image-2 {
+    background-image: url("../img/image-2.png");
+}
+
+.image-3 {
+    background-image: url("../img/image-3.png");
+}
+
+.image-4 {
+    background-image: url("../img/image-4.png");
+}
+
+.image-5 {
+    background-image: url("../img/image-5.png");
+}
+
+.image-6 {
+    background-image: url("../img/image-6.png");
+}
