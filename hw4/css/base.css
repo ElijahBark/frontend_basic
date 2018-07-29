@@ -1,0 +1,10 @@
+body {
+    background: url("../img/background.png") center center fixed;
+    background-size: cover;
+    font-size: 14px;
+    font-family:  Verdana, sans-serif;
+}
+
+.green-text {
+    color: #3cb878;
+}
