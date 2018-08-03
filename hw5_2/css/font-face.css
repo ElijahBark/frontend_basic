@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo_regular/Arimo-Regular-webfont.eot');
+    src: url('../fonts/arimo_regular/Arimo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/arimo_regular/Arimo-Regular-webfont.woff') format('woff'),
+         url('../fonts/arimo_regular/Arimo-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/arimo_regular/Arimo-Regular-webfont.svg#arimoregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo_italic/Arimo-Italic-webfont.eot');
+    src: url('../fonts/arimo_italic/Arimo-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/arimo_italic/Arimo-Italic-webfont.woff') format('woff'),
+    url('../fonts/arimo_italic/Arimo-Italic-webfont.ttf') format('truetype'),
+    url('../fonts/arimo_italic/Arimo-Italic-webfont.svg#arimoitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo_bolditalic/Arimo-BoldItalic-webfont.eot');
+    src: url('../fonts/arimo_bolditalic/Arimo-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/arimo_bolditalic/Arimo-BoldItalic-webfont.woff') format('woff'),
+    url('../fonts/arimo_bolditalic/Arimo-BoldItalic-webfont.ttf') format('truetype'),
+    url('../fonts/arimo_bolditalic/Arimo-BoldItalic-webfont.svg#arimobold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../fonts/arimo_bold/Arimo-Bold-webfont.eot');
+    src: url('../fonts/arimo_bold/Arimo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/arimo_bold/Arimo-Bold-webfont.woff') format('woff'),
+    url('../fonts/arimo_bold/Arimo-Bold-webfont.ttf') format('truetype'),
+    url('../fonts/arimo_bold/Arimo-Bold-webfont.svg#arimobold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}

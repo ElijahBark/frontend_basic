@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 1200px;
+    background-color: #4bcaff;
+    border: 30px solid grey;
+    box-sizing: border-box;
+}
+
+td {
+    width: 12.5%;
+    height: 0;
+    padding-bottom: 12.5%;
+    background-color: #fff;
+    border: 15px solid grey;
+}
+
+.bigger-width {
+    width: 25%;
+}
+
+.bigger-height td {
+    padding-bottom: 25%;
+}
+
+
+.black {
+    background-color: #000000;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color: deepskyblue;
+}
+
+.red {
+    background-color: red;
+}
