@@ -1,46 +1,47 @@
 .header {
-    height: 140px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
 }
 
-.header__logo {
-    height: 50px;
-    width: 165px;
-    display: flex;
-    justify-content: space-between;
+.header__logo-image {
+    display: inline-block;
+    width: 46px;
+    height: 44px;
+    background: url("../img/logo.png") no-repeat;
 }
 
-.header__logo:hover .header__logo__sign * {
-    color: #f26522;
+.header__logo:hover .header__logo-image {
+    background: url("../img/logo-hover.png") no-repeat;
 }
 
-.header__logo .hover {
-    display: none;
+
+.header__logo-sign {
+    display: inline-block;
 }
 
-.header__logo:hover .regular {
-    display: none;
-}
-
-.header__logo:hover .hover {
-    display: block;
-}
-
-.header__logo__sign {
-    width: 110px;
-}
-
-.header__logo__sign_big {
+.header__logo-sign .big {
     font-size: 29px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 21px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.header__logo__sign_small {
+.header__logo-sign .small {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 21px;
+    display: block;
+}
+
+.header__contacts-text {
+    text-align: right;
+}
+
+
+.header__logo:hover * {
+    color: #f26522;
 }
