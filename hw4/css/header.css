@@ -5,12 +5,10 @@
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px 80px;
 }
-
 .header__container {
     display: flex;
     justify-content: space-between;
 }
-
 .header__logo {
     font-size: 20px;
     line-height: 20px;
@@ -19,56 +17,45 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .header__logo:hover {
     color: #3cb878;
 }
-
 .header__client {
     color: #fff;
 }
-
 .header__tools {
     display: flex;
 }
-
 .header__client {
     min-width: 200px;
 }
-
 .header__menu {
     display: flex;
     justify-content: space-around;
 }
-
 .header__menu::after {
     content: '';
     height: 20px;
     border-left: 1px solid #302d2c;
     margin-right: 25px;
 }
-
-.header__menu__item {
+.header__menu-item {
     margin-right: 25px;
 }
-
-.header__menu__item:first-child {
+.header__menu-item:first-child {
     margin-left: 25px;
 }
-
-.header__menu__icon {
+.header__menu-icon {
     width: 30px;
     height: 20px;
     background-image: url("../img/icons.png");
 }
-
 .icon-1 {
-background-position: -60px 0;
+    background-position: -60px 0;
 }
-
 .icon-2 {
-background-position: -30px 0;
+    background-position: -30px 0;
 }
-.header__menu__icon:hover {
+.header__menu-icon:hover {
     background-position-y: -20px;
 }

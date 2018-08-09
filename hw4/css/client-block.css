@@ -9,30 +9,25 @@
     background-color: #fff;
     border-radius: 10px;
 }
-
 .client-block__container {
     max-height: 630px;
 }
-
 .client-block__header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-
 .client-block__social-networks-sign {
     display: flex;
     justify-content: space-between;
     margin-bottom: 35px;
 }
-
-.client-block__header__text-big {
+.client-block__header-text_big {
     color: #434343;
     font-size: 20px;
     position: relative;
 }
-
-.client-block__header__text-big::before {
+.client-block__header-text_big::before {
     content: "";
     width: 20px;
     height: 20px;
@@ -40,7 +35,6 @@
     position: absolute;
     left: -60px;
 }
-
 .client-block__button {
     display: flex;
     justify-content: center;
@@ -57,55 +51,44 @@
     border-radius: 3px;
     cursor: pointer;
 }
-
-.client-block__button__logo {
+.client-block__button-logo {
     height: 20px;
     background-image: url("../img/icons.png");
 }
-
-.client-block__button__text::before {
+.client-block__button-text::before {
     content: "";
     margin: 0 15px;
 }
-
 .button-facebook {
     background-color: #305db8;
 }
-
 .logo-facebook {
     width: 20px;
     background-position: -85px 0;
 }
-
 .text-facebook::before {
     border-left: 1px solid #2953a8;
 }
-
 .logo-google {
     width: 27px;
     background-position: -105px 0;
 }
-
 .button-google {
     background-color: #df4a32;
 }
-
 .text-google::before {
     border-left: 1px solid #ca412a;
 }
-
 .client-block__measure {
     text-align: center;
     margin-bottom: 15px;
 }
-
 .client-block__measure span {
     width: 20%;
     color: #848484;
     display: inline-block;
     position: relative;
 }
-
 .client-block__measure span::before,
 .client-block__measure span::after {
     content: "";
@@ -115,17 +98,14 @@
     top: 50%;
     width: 200%;
 }
-
 .client-block__measure span::before {
     right: calc(100% - 15px);
     margin-right: 15px;
 }
-
 .client-block__measure span::after {
     left: calc(100% - 15px);;
     margin-left: 15px;
 }
-
 .register__field {
     box-sizing: border-box;
     border: 2px solid #f7f7f7;
@@ -134,32 +114,26 @@
     border-radius: 3px;
     margin-bottom: 15px;
 }
-
 .register__field::placeholder {
     color: #cccccc;
     opacity: 1;
 }
-
 .register__field:focus::placeholder {
     color: transparent;
 }
-
 .register__field:focus {
     outline: 0;
     box-shadow: 0 2px 5px 0 #d6d6d6;
     color: #434343;
 }
-
 .register__checkbox {
     margin-top: 25px;
     visibility: hidden;
 }
-
 .register__label {
     position: relative;
     margin-left: 10px;
 }
-
 .register__label::before {
     content: "";
     display: block;
@@ -169,18 +143,15 @@
     top: 0;
     border: 1px solid #eaeaea;
 }
-
 .register__checkbox:checked + .register__label::before {
     background-image: url("../img/icons.png");
     background-position: -130px 0;
 }
-
 .register__button {
     margin-top: 30px;
     background-color: #3cb878;
     width: 100%;
 }
-
 .register__checkbox, .register__label {
     cursor: pointer;
 }
