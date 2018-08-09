@@ -1,51 +1,49 @@
 .header {
     height: 140px;
     display: grid;
-    grid-template-columns: 50% 50%;
-    /*justify-content: space-between;*/
+    grid-template-columns: 1fr 1fr;
+    align-self: start;
 }
 
-.header__logo {
-    height: 50px;
-    width: 165px;
-    display: grid;
-    grid-template-columns: auto auto;
+
+.header__logo-image {
+    display: inline-block;
+    width: 46px;
+    height: 44px;
+    background: url("../img/logo.png") no-repeat;
 }
 
-.header__logo:hover .header__logo__sign * {
-    color: #f26522;
+.header__logo:hover .header__logo-image {
+    background: url("../img/logo-hover.png") no-repeat;
 }
 
-.header__logo .hover {
-    display: none;
+
+.header__logo-sign {
+    display: inline-block;
 }
 
-.header__logo:hover .regular {
-    display: none;
-}
-
-.header__logo:hover .hover {
-    display: block;
-}
-
-.header__logo__sign {
-    margin-left:5px;
-}
-
-.header__logo__sign_big {
+.header__logo-sign .big {
     font-size: 29px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 21px;
+    display: block;
+    margin-bottom: 5px;
 }
 
-.header__logo__sign_small {
+.header__logo-sign .small {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 700;
     line-height: 21px;
+    display: block;
 }
 
-.header__contacts {
-    justify-self: end;
+.header__contacts-text {
+    text-align: right;
+}
+
+
+.header__logo:hover * {
+    color: #f26522;
 }
