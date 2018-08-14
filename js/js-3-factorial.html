@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    alert(factorial(+prompt("insert your natural number equals to zero or bigger", 0)));
+
+    function factorial(number) {
+        let result = 1;
+        for (let i = 2; i <= number; i++) {
+            result *= i;
+        }
+        return Number.isInteger(number)? result: "incorrect input";
+    }
+
+</script>
+
+</body>
+</html>

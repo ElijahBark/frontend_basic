@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    alert(fibonacci(+prompt("insert your number", 0), [0,1]));
+
+    function fibonacci(number, arr) {
+        switch (true) {
+            case (number === arr[0]):
+                return arr[0];
+            case (number === arr[1]):
+                return arr[1];
+            case (arr.length >= number):
+                return arr[number-1];
+            default:
+                arr[number-1] = fibonacci(number-1, arr)+fibonacci(number-2, arr);
+                return arr[number-1];
+        }
+    }
+
+</script>
+
+</body>
+</html>

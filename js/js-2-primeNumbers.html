@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+    userInsert();
+
+    function userInsert() {
+        let firstNumber = +prompt("input natural number bigger than 1", 2);
+        let secondNumber = +prompt("input natural number bigger than 1", 2);
+        Number.isInteger(firstNumber) && Number.isInteger(secondNumber) && (firstNumber > 1) && (secondNumber > 1)? primeNumbers(firstNumber, secondNumber): userInsert();
+    }
+
+    function primeNumbers(firstnumber, secondNumber) {
+
+        let cache = [2];
+        for (let i = 3; i <= Math.max(firstnumber, secondNumber); i++) {
+            let isPrime = true;
+            for (let j = 0; j < cache.length; j++) {
+                if (i%cache[j] === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime)  {
+                cache.push(i);
+            }
+        }
+
+        cache = cache.filter(function(number) {
+            return number >= Math.min(firstnumber, secondNumber);
+        })
+
+        for (let i = 0; i < cache.length; i++) {
+            console.log(cache[i])
+        }
+    }
+
+
+
+</script>
+
+</body>
+</html>

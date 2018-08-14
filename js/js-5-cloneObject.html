@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<script>
+
+    // let user = {
+    //     name: "Vasya",
+    //     age: 35,
+    //     dog: {
+    //         name: "Sharik",
+    //         kind: "pug"
+    //     }
+    // }
+    //
+    // let newUser = copyObject(user);
+    //
+    // user.dog.name = "Tuzik";
+    //
+    // console.log(user);
+    // console.log(newUser);
+
+    function copyObject(obj) {
+        let result = {};
+        for (var key in obj) {
+            result[key] = typeof obj[key] !== "object" ? obj[key] : copyObject(obj[key]);
+        }
+        return result;
+    }
+
+</script>
+
+</body>
+</html>
+
