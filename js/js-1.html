@@ -8,15 +8,12 @@
 <body>
 
 <script>
-    let name = prompt("input your name", "");
-    let age = prompt("input your age", 18);
-    invitation(name, age);
+    invitation("", 18);
 
     function invitation(name, age) {
-        if (name === "" || !Number.isInteger(age)) {
-            let newName = prompt("input your name", name);
-            let newAge = +prompt("input your age", age);
-            return invitation(newName, newAge);
+        while (name === "" || !Number.isInteger(age)) {
+            name = prompt("input your name", name);
+            age = +prompt("input your age", age);
         }
         switch (true) {
             case (age < 18):
