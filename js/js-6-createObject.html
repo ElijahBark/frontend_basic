@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    function createNewUser() {
+        let user = {};
+
+        Object.defineProperty(user, "firstname", {writable: false, configurable: true});
+        Object.defineProperty(user, "lastname", {writable: false, configurable: true});
+
+        user.setFirstName = function() {
+            let str = prompt("input firstname", "");
+            Object.defineProperty(user, "firstname", {value:str});
+        };
+
+        user.setLastName = function() {
+            let str = prompt("input lastname", "");
+            Object.defineProperty(user, "lastname", {value:str});
+        };
+
+        user.getLogin = function () {
+            return `${this.firstname.toLowerCase().charAt(0)}${this.lastname.toLowerCase()}`;
+        };
+
+        user.setFirstName();
+        user.setLastName();
+
+        return user;
+    }
+
+
+
+    newUser = createNewUser();
+    console.log(newUser)
+
+</script>
+
+</body>
+</html>

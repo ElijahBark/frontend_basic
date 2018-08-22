@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function excludeBy(firstArr, secondArr, parameter) {
+        let secondKeys = secondArr.map(function (item) {
+            return item[parameter];
+        });
+
+        return firstArr.filter(function (item) {
+            return secondKeys.indexOf(item[parameter]) === -1;
+        });
+    }
+
+
+    let arr1 = [{
+        name: "Ivan",
+        surname: "Ivanov",
+        gender: "male",
+        age: 30
+    },
+        {
+            name: "Anna",
+            surname: "Ivanova",
+            gender: "female",
+            age: 22
+        }];
+
+    let arr2 = [{
+        name: "Ivan",
+        surname: "Ivanov",
+        gender: "male",
+        age: 30
+    }];
+
+
+    console.log(excludeBy(arr1, arr2, "name"));
+</script>
+
+</body>
+</html>
