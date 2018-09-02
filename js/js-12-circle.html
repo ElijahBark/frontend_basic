@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="draw the circle" id="button">
+
+
+</body>
+<script>
+    button.addEventListener('click', function () {
+        button.style.display = "none";
+
+        let firstInput = document.createElement('input');
+        firstInput.type = "text";
+        firstInput.id = "size";
+        firstInput.value = "input diameter";
+        document.body.appendChild(firstInput);
+
+        let secondInput = document.createElement('input');
+        secondInput.type = "text";
+        secondInput.id = "color";
+        secondInput.value = "input color (word, #(######), rgb(###,###,###)";
+        document.body.appendChild(secondInput);
+
+        let newButton = document.createElement('input');
+        newButton.type = "button";
+        newButton.id = "newbutton";
+        newButton.value = "draw";
+        document.body.appendChild(newButton);
+
+        newButton.addEventListener("click", function () {
+            let size = document.getElementById('size');
+            let color = document.getElementById('color');
+            let circle = document.createElement('div');
+            circle.style.width = size.value+'px';
+            circle.style.height = size.value+'px';
+            circle.style.borderRadius = "50%";
+            circle.style.backgroundColor = color.value;
+            for (elem of document.body.children) {
+                elem.style.display = 'none';
+            }
+            document.body.appendChild(circle);
+        })
+    });
+
+
+
+</script>
+</html>

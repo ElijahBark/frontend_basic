@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+   function createAndRemoveList(timer) {
+       let ul = document.createElement('ul');
+       document.body.appendChild(ul);
+       let count = +prompt('input count of elements in the list', '1');
+
+       for (let i = 0; i < count; i++) {
+           let li = document.createElement('li');
+           li.innerHTML = prompt('input name of item', '');
+           ul.appendChild(li);
+       }
+
+
+       function changeCounterCycle(counter) {
+           let p = document.createElement('p');
+           p.innerHTML = counter;
+           let pastP = document.getElementsByTagName('p')[0];
+           if (typeof pastP !== 'undefined') {
+               document.body.replaceChild( p, pastP)
+           } else {
+               document.body.insertBefore(p, ul);
+           }
+
+           counter -= 1;
+           setTimeout(function() {
+               if(counter > 0) {
+                   changeCounterCycle(counter);
+               } else {
+                   let arr = document.getElementsByTagName("*");
+                   for (let i = 0; i < arr.length; i++) {
+                       arr[i].remove();
+                   }
+               }
+           }, 1000);
+       }
+
+       changeCounterCycle(timer);
+   }
+
+   createAndRemoveList(10);
+
+</script>
+</body>
+</html>

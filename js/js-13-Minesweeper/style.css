@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #4bcaff;
+    flex-shrink: 0;
+}
+
+.cell:first-child {
+    border-left: 1px solid black;
+}
+
+.row:first-of-type .cell {
+    border-top: 1px solid black;
+
+}
+
+
+
+.user-menu {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-menu input {
+    width: 80px;
+}

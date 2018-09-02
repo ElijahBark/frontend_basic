@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function timeToDeadline(arrOfDeveloper, arrOfTasks, deadline) {
+        let daysLeft = workingDays(deadline);
+
+        let tasksForHour = arrOfDeveloper.reduce(function (sum,current) {
+            return sum+current;
+        });
+
+        let tasksAll = arrOfTasks.reduce(function (sum,current) {
+            return sum+current;
+        });
+
+        console.log(tasksForHour*daysLeft*8);
+        console.log(tasksAll);
+        if (tasksAll/(tasksForHour*8) <= daysLeft) {
+            console.log(`Все задачи будут успешно выполнены за ${Math.floor(daysLeft-(tasksAll/(tasksForHour*8)))} дней до наступления дедлайна!`)
+        } else {
+            console.log(`Команде разработчиков придется потратить дополнительно ${Math.ceil((tasksAll-(tasksForHour*8* daysLeft))/tasksForHour) } часов после дедлайна, чтобы выполнить все задачи в беклоге`)
+        }
+    }
+
+    function dayOfYear(date) {
+        let start = new Date(date.getFullYear(), 0, 0);
+        let diff = date - start;
+        let oneDay = 1000 * 60 * 60 * 24;
+        return Math.floor(diff / oneDay);
+    }
+
+    function workingDays(deadline) {
+        let today = new Date();
+        let time = dayOfYear(deadline)-dayOfYear(today)+1;
+
+        let workingDays = 0;
+
+        for (let i = 0; i < time; i++) {
+            let currDate = new Date(today.getFullYear(), today.getMonth(), today.getDate()+i);
+            if (currDate.getDay() !== 0 && currDate.getDay() !== 6) {
+                workingDays++;
+            }
+        }
+
+        return workingDays;
+
+    }
+
+    timeToDeadline([1,2,3,4,5,6],[11,12,34,2500], new Date(2018, 8,15))
+</script>
+
+</body>
+</html>

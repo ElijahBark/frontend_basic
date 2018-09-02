@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="draw the circle" id="button">
+
+
+</body>
+<script>
+    button.addEventListener('click', function () {
+        button.style.display = "none";
+
+        let firstInput = document.createElement('input');
+        firstInput.type = "text";
+        firstInput.id = "size";
+        document.body.appendChild(firstInput);
+
+        let newButton = document.createElement('input');
+        newButton.type = "button";
+        newButton.id = "newbutton";
+        newButton.value = "draw";
+        document.body.appendChild(newButton);
+
+        newButton.addEventListener("click", function () {
+
+            for (elem of document.body.children) {
+                elem.style.display = 'none';
+            }
+
+            document.body.style.height = "100vh";
+            document.body.style.display = "flex";
+            document.body.style.flexWrap = "wrap";
+            document.body.style.alignContent = "space-around";
+
+            for (let i = 0; i < 100; i++) {
+                let size = document.getElementById('size');
+                let color = document.getElementById('color');
+                let circleContainer =  document.createElement('div');
+                circleContainer.style.flexBasis = "10%";
+                circleContainer.style.display = "flex";
+                circleContainer.style.justifyContent = "center";
+
+
+                let circle = document.createElement('div');
+                circle.style.width = size.value+'px';
+                circle.style.height = size.value+'px';
+                circle.style.borderRadius = "50%";
+                circle.style.backgroundColor = getRandomColor();
+                circle.className = "circle";
+
+                circleContainer.appendChild(circle);
+
+                document.body.appendChild(circleContainer);
+            }
+        })
+    });
+
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    document.addEventListener('click', function(e){
+        if(e.target.classList.contains('circle')) {
+            e.target.style.backgroundColor = "transparent";
+        }
+    })
+
+
+
+</script>
+</html>

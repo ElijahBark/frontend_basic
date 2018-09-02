@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function dateOfBorn() {
+        let dateOfBorn = new Date(+prompt('input year', '1980'), +prompt('input month', '1') - 1, +prompt('input day', '1'));
+        let today = new Date();
+        let result = today.getFullYear() - dateOfBorn.getFullYear();
+        if (today.getMonth() < dateOfBorn.getMonth() ||
+            (today.getMonth() === dateOfBorn.getMonth() && today.getDate() < dateOfBorn.getDate())) {
+            --result
+        }
+        alert(`Вам ${result} лет!`);
+
+
+        let zodiacSign = '';
+        let zodiacArr = ["Козерог", "Водолей", "Рыбы", "Овен",
+            "Телец", "Близнецы", "Рак", "Лев", "Дева", "Весы", "Скорпион",
+            "Стрелец"];
+        let day = dateOfBorn.getDate();
+        switch (dateOfBorn.getMonth()) {
+            case 0: {//January
+                if (day < 20)
+                    zodiacSign = zodiacArr[0];
+                else
+                    zodiacSign = zodiacArr[1];
+            }
+                break;
+            case 1: {//February
+                if (day < 19)
+                    zodiacSign = zodiacArr[1];
+                else
+                    zodiacSign = zodiacArr[2];
+            }
+                break;
+            case 2: {//March
+                if (day < 21)
+                    zodiacSign = zodiacArr[2];
+                else
+                    zodiacSign = zodiacArr[3];
+            }
+                break;
+            case 3: {//April
+                if (day < 20)
+                    zodiacSign = zodiacArr[3];
+                else
+                    zodiacSign = zodiacArr[4];
+            }
+                break;
+            case 4: {//May
+                if (day < 21)
+                    zodiacSign = zodiacArr[4];
+                else
+                    zodiacSign = zodiacArr[5];
+            }
+                break;
+            case 5: {//June
+                if (day < 21)
+                    zodiacSign = zodiacArr[5];
+                else
+                    zodiacSign = zodiacArr[6];
+            }
+                break;
+            case 6: {//July
+                if (day < 23)
+                    zodiacSign = zodiacArr[6];
+                else
+                    zodiacSign = zodiacArr[7];
+            }
+                break;
+            case 7: {//August
+                if (day < 23)
+                    zodiacSign = zodiacArr[7];
+                else
+                    zodiacSign = zodiacArr[8];
+            }
+                break;
+            case 8: {//September
+                if (day < 23)
+                    zodiacSign = zodiacArr[8];
+                else
+                    zodiacSign = zodiacArr[9];
+            }
+                break;
+            case 9: {//October
+                if (day < 23)
+                    zodiacSign = zodiacArr[9];
+                else
+                    zodiacSign = zodiacArr[10];
+            }
+                break;
+            case 10: {//November
+                if (day < 22)
+                    zodiacSign = zodiacArr[10];
+                else
+                    zodiacSign = zodiacArr[11];
+            }
+                break;
+            case 11: {//December
+                if (day < 22)
+                    zodiacSign = zodiacArr[11];
+                else
+                    zodiacSign = zodiacArr[0];
+            }
+                break;
+        }
+        alert(`Ваш знак зодиака: ${zodiacSign}`)
+
+        let chineseZodiac =['Обезьяна',  'Петух', 'Собака',	'Свинья', 'Крыса', 'Бык', 'Тигр', 'Кролик', 'Дракон', 'Змея', 'Лошадь','Коза'];
+
+        alert(`Ваш знак зодиака по китайскому гороскопу: ${chineseZodiac[dateOfBorn.getFullYear()%12]}`);
+
+    }
+
+    dateOfBorn();
+</script>
+
+</body>
+</html>
