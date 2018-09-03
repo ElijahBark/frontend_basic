@@ -1,0 +1,22 @@
+.screen {
+    font-size: 16px;
+    width: 30px;
+    border: 1px solid black;
+    text-align: right;
+    display: inline-block;
+    padding: 4px;
+}
+
+input {
+    width: 40px;
+}
+.container {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,53 @@
+.screen {
+    font-size: 12px;
+    width: 18px;
+    border: 1px solid black;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 10;
+    background-color: white;
+}
+
+input {
+    width: 40px;
+}
+
+.watches {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#seconds, #minutes {
+    display: none;
+}
+
+#secondArrow {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    height: 40px;
+    outline: 1px solid black;
+    z-index: 1;
+}
+
+#minuteArrow {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    height: 30px;
+    outline: 2px solid black;
+}
+
+.buttons {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
