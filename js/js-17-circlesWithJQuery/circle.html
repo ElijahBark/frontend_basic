@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="draw the circle" id="button">
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    $('#button').click(function() {
+        $('#button').remove();
+        $('body').append('<input>','<input>','<input>');
+        $('input:first-of-type').attr('id','size');
+        $('#size').attr('value','input diameter');
+
+        $('input:nth-of-type(2)').attr('id','color');
+        $('#color').attr('value','input color (word, #(######), rgb(###,###,###)');
+
+        $('input:last-of-type').attr('id','newbutton');
+        $('#newbutton').attr('value','draw').attr('type','button').click(function () {
+            $('body').append('<div>');
+            $('div').css({
+                'width': `${$('#size').val()}px`,
+                'height': `${$('#size').val()}px`,
+                'border-radius': '50%',
+                'background-color': `${$('#color').val()}`
+            });
+            $('input').remove();
+        });
+    });
+
+</script>
+</html>

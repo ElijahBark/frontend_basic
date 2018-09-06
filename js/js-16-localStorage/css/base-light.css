@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    color: #ffffff;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px black;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(to right, #C5E8FC 0%, #7993A4 30%, #7993A4 70%, #C5E8FC 100%);
+}
+
+.container {
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 50px 150px 20px;
+    width: 1366px;
+    background: url(../img/background-day.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}

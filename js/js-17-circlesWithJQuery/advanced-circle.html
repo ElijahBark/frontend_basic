@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .circle-container {
+            flex-basis: 10%;
+            display: flex;
+            justify-content: center;
+        }
+        .circle {
+            border-radius:  50%;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="draw the circle" id="button">
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $('#button').click(function () {
+        $('input').remove();
+
+        $('body').append('<input>','<input>');
+        $('input:first-of-type').attr('id','size');
+
+        $('#size').attr('value','input diameter');
+        $('input:last-of-type').attr('id','newbutton');
+        $('#newbutton').attr('value','draw').attr('type','button').click(function () {
+            $('body').css({
+                'height': '100vh',
+                'display':'flex',
+                'flex-wrap': 'wrap',
+                'align-content': 'space-around'
+            });
+            for (let i = 0; i < 100; i++) {
+                $('body').append('<div><div></div></div>');
+
+            }
+            $('body>div').addClass('circle-container');
+
+            $('.circle-container div').addClass('circle').css({
+                'width': `${$('#size').val()}px`,
+                'height': `${$('#size').val()}px`,
+            });
+            for (let i = 0; i < 100; i++) {
+                $($('.circle')[i]).css({
+                    'background-color':`${getRandomColor()}`
+                })
+
+            }
+            $('input').remove();
+            $('.circle').click(function() {
+                $(this).hide();
+            });
+        });
+    });
+    
+
+
+
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+</script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<script>
+    if (localStorage.getItem('theme') === null) {
+        localStorage.setItem('theme', 'dark');
+        document.head.getElementsByTagName('link')[0].href='css/style.css';
+    } else {
+        let theme = localStorage.getItem('theme');
+        if (theme === 'light') {
+            document.head.getElementsByTagName('link')[0].href='css/style-light.css';
+        } else {
+            document.head.getElementsByTagName('link')[0].href='css/style.css';
+        }
+    }
+</script>
+<div class="container">
+    <header class="header">
+        <div class="header__logo">
+            <a class="header__logo-image" href="#">
+                <div></div>
+            </a>
+            <div class="header__logo-sign">
+                <a href="#" class="big">milan</a>
+                <a href="#" class="small">holidays</a>
+            </div>
+        </div>
+        <div class="header__contacts">
+            <p class="header__contacts-text">tours&#64milanoholidays.com</p>
+            <p class="header__contacts-text">+39 338 709 0880</p>
+        </div>
+    </header>
+    <section class="main-part">
+        <figure class="advertising-block">
+            <img class="advertising-block__image" src="img/image-1.png">
+            <div class="advertising-block__details-container">
+                <div class="advertising-block__details-body">
+                    <p class="advertising-block__details-text">from</p>
+                    <p class="advertising-block__details-text"><span
+                            class="advertising-block__details-price">&euro;50</span><a
+                            class="advertising-block__details-link" href="#"> View Details</a></p>
+                </div>
+            </div>
+            <figcaption class="advertising-block__caption">shopping tours</figcaption>
+        </figure>
+        <figure class="advertising-block">
+            <img class="advertising-block__image" src="img/image-2.png">
+            <div class="advertising-block__details-container">
+                <div class="advertising-block__details-body">
+                    <p class="advertising-block__details-text">from</p>
+                    <p class="advertising-block__details-text"><span
+                            class="advertising-block__details-price">&euro;50</span><a
+                            class="advertising-block__details-link" href="#"> View Details</a></p>
+                </div>
+            </div>
+            <figcaption class="advertising-block__caption">sightseeing tours</figcaption>
+        </figure>
+        <figure class="advertising-block">
+            <img class="advertising-block__image" src="img/image-3.png">
+            <div class="advertising-block__details-container">
+                <div class="advertising-block__details-body">
+                    <p class="advertising-block__details-text">from</p>
+                    <p class="advertising-block__details-text"><span
+                            class="advertising-block__details-price">&euro;50</span><a
+                            class="advertising-block__details-link" href="#"> View Details</a></p>
+                </div>
+            </div>
+            <figcaption class="advertising-block__caption">foud tours</figcaption>
+        </figure>
+        <figure class="advertising-block">
+            <img class="advertising-block__image" src="img/image-4.png">
+            <div class="advertising-block__details-container">
+                <div class="advertising-block__details-body">
+                    <p class="advertising-block__details-text">from</p>
+                    <p class="advertising-block__details-text"><span
+                            class="advertising-block__details-price">&euro;50</span><a
+                            class="advertising-block__details-link" href="#"> View Details</a></p>
+                </div>
+            </div>
+            <figcaption class="advertising-block__caption">bars &#38 nightlife</figcaption>
+        </figure>
+        <figure class="advertising-block">
+            <img class="advertising-block__image" src="img/image-5.png">
+            <div class="advertising-block__details-container">
+                <div class="advertising-block__details-body">
+                    <p class="advertising-block__details-text">from</p>
+                    <p class="advertising-block__details-text"><span
+                            class="advertising-block__details-price">&euro;50</span><a
+                            class="advertising-block__details-link" href="#"> View Details</a></p>
+                </div>
+            </div>
+            <figcaption class="advertising-block__caption">art &#38 architecture</figcaption>
+        </figure>
+        <figure class="advertising-block">
+            <img class="advertising-block__image" src="img/image-6.png">
+            <div class="advertising-block__details-container">
+                <div class="advertising-block__details-body">
+                    <p class="advertising-block__details-text">from</p>
+                    <p class="advertising-block__details-text"><span
+                            class="advertising-block__details-price">&euro;50</span><a
+                            class="advertising-block__details-link" href="#"> View Details</a></p>
+                </div>
+            </div>
+            <figcaption class="advertising-block__caption">walking tours</figcaption>
+        </figure>
+    </section>
+    <footer class="footer">
+        <input type="button" id="change-theme" value="Сhange color theme">
+        <p class="footer__copyright">&#64 2018 Copyright Milan Holidays, Inc. All rights reserved.</p>
+    </footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

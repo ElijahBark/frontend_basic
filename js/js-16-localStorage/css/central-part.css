@@ -1,0 +1,106 @@
+.main-part {
+    min-height: 550px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-bottom: 55px;
+}
+
+.advertising-block {
+    width: 310px;
+    height: 250px;
+    margin-right: 65px;
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.advertising-block:nth-child(3n) {
+    margin-right: 0;
+}
+
+.advertising-block__image {
+    box-sizing: border-box;
+    width: 310px;
+    height: 200px;
+    margin-bottom: 22px;
+    border: 2px solid #fff;
+    border-image-source: linear-gradient(white, black);
+    border-image-slice: 1;
+}
+
+.advertising-block__details-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 310px;
+    height: 65px;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background-color: #f26522;
+    position: absolute;
+    top:65px;
+
+}
+
+.advertising-block__details-container {
+    box-sizing: border-box;
+    position: absolute;
+    top: 135px;
+    width: 310px;
+    height: 65px;
+    overflow: hidden;
+}
+
+
+
+.advertising-block:hover .advertising-block__details-body {
+    animation-name: animation;
+    animation-duration: 200ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation {
+    from {
+        top: 65px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+
+.advertising-block__details-text {
+    font-size: 10px;
+    position: relative;
+}
+
+
+.advertising-block__details-price {
+    font-size: 20px;
+    line-height: 21px;
+}
+
+.advertising-block__details-link {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.advertising-block__details-link::after {
+    content: " \003e";
+}
+
+.advertising-block:hover .advertising-block__caption {
+    color: #f26522;
+}
+
+.advertising-block__caption {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
